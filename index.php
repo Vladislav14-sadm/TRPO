@@ -1,40 +1,44 @@
 <?php
+ini_set("display_errors", 1);
+error_reporting(-1);
 
 class A
 {
+    protected $x;
 
+    public function line($a, $b)
+    {
+        return array(($a === 0 ? Null : $this->x = -$b / $a));
+
+    }
 }
 
 class B extends A
 {
-    public function __construct($a, $b)
-    {
 
-        $this->a = $a;
-        $this->b = $b;
+    protected function desc($a, $b, $c)
+    {
+        return $d = $b * $b - 4 * $a * $c;
+
     }
 
-    protected $a, $b;
-}
-
-class C extends B
-{
-
-    public function __construct($a, $b, $c)
+    public function line($a, $b, $c)
     {
-        $this->c = $c;
-        parent:: __construct($a, $b);
+        if ($a === 0) {
+            return parent::eql($b, $c);
+        }
+
+        $d = $this->desc($a, $b, $c);
+
+        if ($d > 0) {
+            $sd = sqrt($d);
+            return $this->x = array((-$b - $sd) / (2 * $a), (-$b + $sd) / (2 * $a));
+        }
+
+        if ($d === 0) {
+            return $this->x = array(-$b / (2 * $a));
+        }
+
+        return null;
     }
-
-    protected $c;
 }
-
-$a1 = new A();
-$a2 = new A();
-$b3 = new B($a1, $a2);
-$a4 = new A();
-$a5 = new A();
-$c6 = new C($b3, $a4, $a5);
-
-var_dump($c6);
-?>
