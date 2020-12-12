@@ -1,3 +1,3 @@
 <?php
-trim (shell_exec('git clone https://github.com/rok9ru/trpo-core.git core'));
-trim (shell_exec('git symbolic-ref --short -q HEAD>version'));
+shell_exec('git clone https://github.com/rok9ru/trpo-core.git core');
+shell_exec('git symbolic-ref --short -q HEAD>version');
