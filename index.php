@@ -15,7 +15,10 @@ require_once 'Akulov/MyLog.php';
 require_once 'Akulov/AkulovException.php';
 
 try {
-    echo "Enter 3 numbers\n\r";
+
+    M::log("Версия программы: " . file_get_contents('version') );
+
+    echo "Введите 3 числа через Enter\n\r";
 
     $a = (int)readline();
     $b = (int)readline();
