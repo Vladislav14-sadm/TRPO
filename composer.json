@@ -1,0 +1,36 @@
+{
+  "name": "vladislav14-sadm/akulov_i_b",
+  "description": "project-akulov",
+  "type": "project",
+  "license": "-",
+  "authors": [
+    {
+      "name": "vladislav akulov",
+      "email": "vladakulov14@gmail.com"
+    }
+  ],
+
+  "minimum-stability": "dev",
+
+  "require": {
+    "vladislav14-sadm/akulov_my": "2.1"
+  },
+
+
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/rok9ru/trpo-core"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/Vladislav14-sadm/Akulov_MY.git"
+    }
+  ],
+ 
+  "scripts": {
+    "post-update-cmd": [
+        "git symbolic-ref --short -q HEAD>version"
+    ]
+}
+}

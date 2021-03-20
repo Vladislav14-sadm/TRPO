@@ -2,3 +2,5 @@ core
 log
 version
 .idea
+composer.phar
+vendor
