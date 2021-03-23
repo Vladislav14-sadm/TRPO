@@ -29,7 +29,7 @@
   ],
  
   "scripts": {
-    "post-update-cmd": [
+    "post-install-cmd": [
         "git symbolic-ref --short -q HEAD>version"
     ]
 }
