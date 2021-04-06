@@ -13,7 +13,7 @@
   "minimum-stability": "dev",
 
   "require": {
-    "vladislav14-sadm/akulov_my": "2.1"
+    "vladislav14-sadm/akulov_my": "^2.0"
   },
 
 
